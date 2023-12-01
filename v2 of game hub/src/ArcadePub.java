@@ -15,7 +15,7 @@ public class ArcadePub extends JFrame {
 
     public void initialize() {
 
-        // console panel
+        // the console panel form
         JLabel lbConsole = new JLabel(" Select your desired Console (PS4/PS5) \t ||press start to begin timer||");
         lbConsole.setFont(mainFont);
 
@@ -28,12 +28,12 @@ public class ArcadePub extends JFrame {
         consolePanel.add(lbConsole);
         consolePanel.add(tfConsole);
 
-        // details area
+        // details sections
         taDetails = new JTextArea();
         taDetails.setFont(mainFont);
         taDetails.setEditable(false);
 
-        // panel buttons
+        // the panel buttonz
 
         JButton btnStart = new JButton("Start");
         btnStart.setFont(mainFont);
@@ -47,7 +47,7 @@ public class ArcadePub extends JFrame {
             }
 
         });
-
+           //actions of the buttonz
         JButton btnStop = new JButton("Stop");
         btnStop.setFont(mainFont);
         btnStop.addActionListener(new ActionListener() {
@@ -72,6 +72,7 @@ public class ArcadePub extends JFrame {
                         taDetails.setText("Invalid console type");
                         return;
                     }
+                    //kulipa
 
                     double totalCharge = durationInHours * chargePerHour;
                     taDetails.append("\nGame session ended at " + getTimeAsString(stopTime) +
@@ -98,7 +99,7 @@ public class ArcadePub extends JFrame {
 
         });
 
-        // buttons panel
+        // buttonz area in the form
 
         JPanel buttonsPanel = new JPanel();
         buttonsPanel.setLayout(new GridLayout(1, 3, 5, 5));
@@ -107,7 +108,7 @@ public class ArcadePub extends JFrame {
         buttonsPanel.add(btnStop);
         buttonsPanel.add(btnclear);
 
-        // mainpanel
+        // main area appearing panel
 
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BorderLayout());
@@ -176,6 +177,7 @@ public class ArcadePub extends JFrame {
         paidFrame.setVisible(true);
     }
 
+    //end-return
     public static void main(String[] args) {
         ArcadePub myArcade = new ArcadePub();
         myArcade.initialize();
